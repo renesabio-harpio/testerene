@@ -8,27 +8,27 @@ Documento vivo. Cada etapa tem um arquivo próprio nesta pasta. Status: ⬜ a fa
 |---|---|
 | Site institucional | 5 páginas (Início, Sobre, Serviços, Blog, Contato): **R$1.600 de implantação + R$300/mês** |
 | Landing page | **R$800 de implantação + R$300/mês** |
-| Manutenção | Obrigatória, R$300/mês, contrato de 12 meses com **renovação anual automática** |
-| Pagamento | **Checkout no próprio site** (Mercado Pago: implantação avulsa + assinatura mensal) |
+| Manutenção | Obrigatória, R$300/mês com hospedagem e domínio inclusos, contrato de 12 meses com **renovação anual automática** |
+| Pagamento | **Checkout no próprio site com InfinitePay** (link avulso para implantação + link de assinatura de R$300/mês) |
 | Medição | **Google Analytics 4** + rastreamento de quem visitou (Brevo Tracker) |
 | Portal do cliente | "Cara de SaaS": cadastro → briefing → área do cliente com módulos em **"Tenho interesse"** (nunca "Ativar") |
 | Servidor | VPS Hostgator 2 GB com Easypanel. Desligar **Inbound Hub** e **Klaryo** |
 | Site renesabio.com.br | Sai do HTML/GitHub e passa para **WordPress** no Easypanel |
-| Portal | App separado, publicado pelo **GitHub → Easypanel** (ex.: `portal.renesabio.com.br`) |
+| Portal | **Uma única área do cliente dinâmica** (cada cliente faz login e vê só os dados dele). Nada de página por cliente. Detalhes na etapa 5 |
 | Domínios de e-mail | `renesabio.com.br` = domínio limpo (contato e clientes). `renesabio.com` = prospecção |
 | DNS | Cloudflare |
 | WhatsApp | Seu número pessoal, via Evolution API (riscos e limites na etapa 8) |
-| Ferramentas | n8n, Brevo (CRM), Evolution API |
+| Ferramentas | n8n (na mesma VPS), Brevo (CRM), Evolution API |
 
 ## Etapas
 
 | # | Etapa | Arquivo | Status |
 |---|---|---|---|
-| 1 | Oferta e módulos do portal | [01-oferta-e-modulos.md](01-oferta-e-modulos.md) | 🟡 |
+| 1 | Oferta e módulos do portal | [01-oferta-e-modulos.md](01-oferta-e-modulos.md) | ✅ |
 | 2 | Estrutura e textos do site novo | 02-site-estrutura-e-textos.md | ⬜ |
 | 3 | Easypanel: desligar apps antigos e subir o WordPress | 03-easypanel-wordpress.md | ⬜ |
 | 4 | Montar o site no WordPress | 04-montagem-wordpress.md | ⬜ |
-| 5 | Portal do cliente (GitHub → Easypanel) | 05-portal-cliente.md | ⬜ |
+| 5 | Portal do cliente (área única e dinâmica) | [05-portal-cliente.md](05-portal-cliente.md) | 🟡 |
 | 6 | Medição: GA4 e quem visitou o site | [06-medicao-e-rastreamento.md](06-medicao-e-rastreamento.md) | 🟡 |
 | 7 | Fluxos no n8n (checkout, briefing, interesse, alterações, Brevo) | 07-fluxos-n8n.md | ⬜ |
 | 8 | E-mail e WhatsApp (domínio .com, Evolution API, limites) | 08-email-whatsapp.md | ⬜ |

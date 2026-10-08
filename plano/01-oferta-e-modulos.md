@@ -18,7 +18,7 @@ Escrito em linguagem de resultado, sem termos técnicos assustadores:
 
 - **Seu site sempre no ar.** Se cair, eu resolvo em até 24h.
 - **Protegido e atualizado.** Segurança, backups semanais e monitoramento.
-- **Hospedagem e domínio sob meus cuidados.** Você não paga nada à parte. *(Confirme se isso já é verdade hoje.)*
+- **Hospedagem e domínio sob meus cuidados.** Você não paga nada à parte.
 - **Até 2 alterações por mês.** Trocar texto, foto, telefone ou banner.
 - **Publicação no blog com a formatação certa.** Você manda o texto, eu publico.
 - **Relatório mensal simples.** Visitas e cliques no WhatsApp. *(Entra com as etapas 6 e 7: medição e fluxos.)*
@@ -32,23 +32,20 @@ Escrito em linguagem de resultado, sem termos técnicos assustadores:
 - Domínio no nome do cliente; você administra.
 - Cobrança pelo checkout no próprio site (detalhes abaixo). Implantação: 50% no aceite e 50% na entrega, ou 100% no checkout.
 
-## 1.1 Checkout no site (Mercado Pago)
+## 1.1 Checkout no site (InfinitePay)
 
-**Recomendação: Mercado Pago**, porque tem:
-- **Assinaturas recorrentes** (plano mensal de R$300 cobrado automaticamente no cartão), com link de pagamento próprio.
-- **Pagamento único** por Pix, cartão ou boleto, para a implantação.
-- Botões e links que você cola em qualquer página do WordPress, sem precisar de loja.
-
-A InfinitePay é ótima para link de pagamento avulso e taxa baixa. Para **assinatura recorrente**, o Mercado Pago é mais simples hoje. Confira as duas no painel antes de decidir.
+**Decisão: InfinitePay**, que você já usa e que já tem **link de assinatura** cobrando R$300/mês no cartão. Não há motivo para trocar. O Mercado Pago também tem assinatura, mas fica só como plano B.
 
 **Como fica no site** (página `/contratar`):
 
 | Plano | Botão 1: implantação | Botão 2: assinatura |
 |---|---|---|
-| Landing Page | Pagar R$800 (Pix/cartão/boleto) | Assinar R$300/mês |
-| Site Institucional | Pagar R$1.600 (Pix/cartão/boleto) | Assinar R$300/mês |
+| Landing Page | Pagar R$800 (link avulso InfinitePay) | Assinar R$300/mês (link de assinatura InfinitePay) |
+| Site Institucional | Pagar R$1.600 (link avulso InfinitePay) | Assinar R$300/mês (link de assinatura InfinitePay) |
 
-Fluxo: o cliente paga → o Mercado Pago avisa o n8n (webhook) → o n8n cria o acesso ao portal, manda o link do briefing e registra a venda no Brevo.
+**Depois do pagamento:**
+- Se a InfinitePay avisar automaticamente (webhook), o n8n libera o portal sozinho.
+- Se não avisar, o caminho simples é: você recebe a notificação do pagamento e clica em um botão no n8n (ou responde "pago" no WhatsApp) para liberar o cliente. É 1 clique por venda. Confira no painel da InfinitePay se há webhook ou notificação por e-mail que o n8n possa ler.
 
 Quando alguém te chamar no WhatsApp, você só manda o link de `/contratar`.
 
@@ -77,6 +74,6 @@ Cada módulo é um card com nome, uma frase de benefício e o botão **Tenho int
 
 ## 3. Pendências desta etapa
 
-- [ ] Confirmar se hospedagem e domínio já estão inclusos nos R$300 dos clientes atuais
-- [ ] Aprovar a lista de módulos (tirar, adicionar ou renomear)
+- [x] Hospedagem e domínio inclusos nos R$300 (confirmado)
+- [x] Lista de módulos aprovada
 - [ ] Pedir um depoimento curto aos clientes atuais (Syna Seguros, RHP Invest, Synait, S91, Harpio)
