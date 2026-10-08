@@ -21,15 +21,36 @@ Escrito em linguagem de resultado, sem termos técnicos assustadores:
 - **Hospedagem e domínio sob meus cuidados.** Você não paga nada à parte. *(Confirme se isso já é verdade hoje.)*
 - **Até 2 alterações por mês.** Trocar texto, foto, telefone ou banner.
 - **Publicação no blog com a formatação certa.** Você manda o texto, eu publico.
-- **Relatório mensal simples.** Visitas e cliques no WhatsApp. *(Entra quando o fluxo da etapa 6 estiver pronto.)*
+- **Relatório mensal simples.** Visitas e cliques no WhatsApp. *(Entra com as etapas 6 e 7: medição e fluxos.)*
 
 ### Regras de contrato (proteção para quem trabalha sozinho)
 
 - Ajustes: até 2 por mês ou 1h no total, sem acumular. O que passar disso: R$120/h.
 - Saída antecipada: o cliente paga 30% das mensalidades que faltam **ou** leva o site exportado mediante uma taxa.
-- Ao fim dos 12 meses: renovação mês a mês, com cancelamento por aviso de 30 dias.
+- **Renovação anual automática:** domínio e hospedagem são pagos por ano, então o contrato renova por mais 12 meses. Para não renovar, o cliente avisa com 30 dias de antecedência do fim do ciclo.
+- Você manda um lembrete 45 dias antes do fim do ciclo (automação no n8n).
 - Domínio no nome do cliente; você administra.
-- Cobrança recorrente automática (Asaas ou similar). Implantação: 50% no aceite e 50% na entrega.
+- Cobrança pelo checkout no próprio site (detalhes abaixo). Implantação: 50% no aceite e 50% na entrega, ou 100% no checkout.
+
+## 1.1 Checkout no site (Mercado Pago)
+
+**Recomendação: Mercado Pago**, porque tem:
+- **Assinaturas recorrentes** (plano mensal de R$300 cobrado automaticamente no cartão), com link de pagamento próprio.
+- **Pagamento único** por Pix, cartão ou boleto, para a implantação.
+- Botões e links que você cola em qualquer página do WordPress, sem precisar de loja.
+
+A InfinitePay é ótima para link de pagamento avulso e taxa baixa. Para **assinatura recorrente**, o Mercado Pago é mais simples hoje. Confira as duas no painel antes de decidir.
+
+**Como fica no site** (página `/contratar`):
+
+| Plano | Botão 1: implantação | Botão 2: assinatura |
+|---|---|---|
+| Landing Page | Pagar R$800 (Pix/cartão/boleto) | Assinar R$300/mês |
+| Site Institucional | Pagar R$1.600 (Pix/cartão/boleto) | Assinar R$300/mês |
+
+Fluxo: o cliente paga → o Mercado Pago avisa o n8n (webhook) → o n8n cria o acesso ao portal, manda o link do briefing e registra a venda no Brevo.
+
+Quando alguém te chamar no WhatsApp, você só manda o link de `/contratar`.
 
 ## 2. Módulos do portal ("Tenho interesse")
 
