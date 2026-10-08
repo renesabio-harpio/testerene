@@ -9,7 +9,7 @@ Documento vivo. Cada etapa tem um arquivo próprio nesta pasta. Status: ⬜ a fa
 | Site institucional | 5 páginas (Início, Sobre, Serviços, Blog, Contato): **R$1.600 de implantação + R$300/mês** |
 | Landing page | **R$800 de implantação + R$300/mês** |
 | Manutenção | Obrigatória, R$300/mês com hospedagem e domínio inclusos, contrato de 12 meses com **renovação anual automática** |
-| Pagamento | **Asaas** (recomendado, aguardando sua confirmação): assinatura por Pix, cartão ou boleto, lembrete automático, NFS-e e webhook para o n8n. Checkout por formulário no site |
+| Pagamento | **Regra: receber na hora.** Mensalidade e implantação por Pix no **Asaas** (lembrete automático, NFS-e, webhook). Implantação no cartão ou parcelada pela **InfinitePay** (recebe na hora). Aguardando sua confirmação |
 | Medição | **Google Analytics 4** + rastreamento de quem visitou (Brevo Tracker) |
 | Portal do cliente | "Cara de SaaS": cadastro → briefing → área do cliente com módulos em **"Tenho interesse"** (nunca "Ativar") |
 | Servidor | VPS Hostgator 2 GB com Easypanel. Desligar **Inbound Hub** e **Klaryo** |

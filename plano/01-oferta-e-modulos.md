@@ -104,6 +104,20 @@ Taxas padrão (os 3 primeiros meses têm preço promocional menor):
 | Cartão parcelado | Uma parcela a cada 32 dias (D+32, D+64…) |
 | Antecipação do cartão | Recebe tudo em até 2 dias úteis, pagando 1,25% ao mês (à vista) ou 1,70% ao mês (parcelado), sujeito a análise de crédito |
 
+### ⚠️ Regra do Renê: receber na hora
+
+Dinheiro parado não compensa. Toda cobrança precisa cair na hora, inclusive cartão e cartão parcelado. Como isso fica:
+
+| Cobrança | Onde cobrar | Por quê |
+|---|---|---|
+| **Mensalidade R$300** | **Asaas, só Pix** (e boleto como reserva) | O Pix cai na hora. Cartão na mensalidade é desligado para não ficar D+32 |
+| **Implantação por Pix** | **Asaas** | Cai na hora |
+| **Implantação no cartão (à vista ou parcelado)** | **InfinitePay** (link avulso, conta CNPJ que você já tem) | A InfinitePay é conhecida por pagar o cartão **na hora**, inclusive parcelado, com a taxa já embutida. Confira as taxas atuais de "recebimento na hora" no app antes de ativar |
+
+**Alternativa só com Asaas:** ligar a antecipação do cartão. Ela depende de análise de crédito (conta nova pode não ser aprovada logo) e no parcelado sai cara: por volta de 1,70% ao mês sobre o prazo de cada parcela, além da taxa do cartão. Por isso a combinação Asaas (Pix) + InfinitePay (cartão) atende melhor a regra.
+
+**Opção para o cliente que parcela:** repassar os juros do parcelamento para ele ("6x com juros"), para que você receba o valor cheio.
+
 **Transferência automática para o Nubank PJ:** não achei na documentação do Asaas uma opção nativa de "saque automático". Dá para montar no n8n: chega o webhook "pagamento recebido", o n8n manda um Pix do saldo para a sua chave do Nubank PJ. São 30 transferências Pix grátis por mês para PJ. Confirme com o suporte do Asaas se a API de transferência exige alguma liberação extra (whitelist de IP ou token de segurança).
 
 **Plano B:** Stripe, que tem o melhor checkout e suporta Pix recorrente, mas não emite nota fiscal.
