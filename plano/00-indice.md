@@ -9,12 +9,12 @@ Documento vivo. Cada etapa tem um arquivo próprio nesta pasta. Status: ⬜ a fa
 | Site institucional | 5 páginas (Início, Sobre, Serviços, Blog, Contato): **R$1.600 de implantação + R$300/mês** |
 | Landing page | **R$800 de implantação + R$300/mês** |
 | Manutenção | Obrigatória, R$300/mês com hospedagem e domínio inclusos, contrato de 12 meses com **renovação anual automática** |
-| Pagamento | **Checkout no próprio site com InfinitePay** (link avulso para implantação + link de assinatura de R$300/mês) |
+| Pagamento | **Asaas** (recomendado, aguardando sua confirmação): assinatura por Pix, cartão ou boleto, lembrete automático, NFS-e e webhook para o n8n. Checkout por formulário no site |
 | Medição | **Google Analytics 4** + rastreamento de quem visitou (Brevo Tracker) |
 | Portal do cliente | "Cara de SaaS": cadastro → briefing → área do cliente com módulos em **"Tenho interesse"** (nunca "Ativar") |
 | Servidor | VPS Hostgator 2 GB com Easypanel. Desligar **Inbound Hub** e **Klaryo** |
 | Site renesabio.com.br | Sai do HTML/GitHub e passa para **WordPress** no Easypanel |
-| Portal | **Uma única área do cliente dinâmica** (cada cliente faz login e vê só os dados dele). Nada de página por cliente. Detalhes na etapa 5 |
+| Portal | **Dentro do WordPress**, em `renesabio.com.br/area-do-cliente`. Uma única página dinâmica: cada cliente faz login e vê só os dados dele |
 | Domínios de e-mail | `renesabio.com.br` = domínio limpo (contato e clientes). `renesabio.com` = prospecção |
 | DNS | Cloudflare |
 | WhatsApp | Seu número pessoal, via Evolution API (riscos e limites na etapa 8) |

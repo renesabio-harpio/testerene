@@ -32,22 +32,44 @@ Escrito em linguagem de resultado, sem termos técnicos assustadores:
 - Domínio no nome do cliente; você administra.
 - Cobrança pelo checkout no próprio site (detalhes abaixo). Implantação: 50% no aceite e 50% na entrega, ou 100% no checkout.
 
-## 1.1 Checkout no site (InfinitePay)
+## 1.1 Pagamento e checkout no site
 
-**Decisão: InfinitePay**, que você já usa e que já tem **link de assinatura** cobrando R$300/mês no cartão. Não há motivo para trocar. O Mercado Pago também tem assinatura, mas fica só como plano B.
+**Situação hoje:** os clientes pagam por Pix, alguns agendados e outros só depois de você lembrar. Ninguém usa cartão recorrente.
 
-**Como fica no site** (página `/contratar`):
+### Comparação (pesquisa feita em out/2026, confira taxas no site de cada um)
 
-| Plano | Botão 1: implantação | Botão 2: assinatura |
-|---|---|---|
-| Landing Page | Pagar R$800 (link avulso InfinitePay) | Assinar R$300/mês (link de assinatura InfinitePay) |
-| Site Institucional | Pagar R$1.600 (link avulso InfinitePay) | Assinar R$300/mês (link de assinatura InfinitePay) |
+| | **Asaas** | Mercado Pago | Stripe | InfinitePay |
+|---|---|---|---|---|
+| Assinatura recorrente nativa | ✅ Cartão, boleto com QR Pix e **Pix Automático** (via API) | ✅ Só cartão (link de assinatura) | ✅ Cartão e **Pix recorrente** (desde abr/2026) | ❌ Não documentada |
+| Cobra e lembra o cliente sozinho | ✅ E-mail, SMS e WhatsApp | Parcial | Parcial | ❌ |
+| Webhook (para o n8n) | ✅ Completo | ✅ | ✅ Excelente | Só por link pago |
+| WordPress | Plugin para WooCommerce, ou só links e API (sem loja) | Plugin oficial para WooCommerce | Plugins | Link de pagamento |
+| Nota fiscal (NFS-e) automática | ✅ | ❌ | ❌ | ❌ |
+| Conta CNPJ | ✅ | ✅ | ✅ | ✅ (você já tem) |
 
-**Depois do pagamento:**
-- Se a InfinitePay avisar automaticamente (webhook), o n8n libera o portal sozinho.
-- Se não avisar, o caminho simples é: você recebe a notificação do pagamento e clica em um botão no n8n (ou responde "pago" no WhatsApp) para liberar o cliente. É 1 clique por venda. Confira no painel da InfinitePay se há webhook ou notificação por e-mail que o n8n possa ler.
+### Recomendação: **Asaas**
+
+1. **Resolve o seu problema real:** o Asaas gera a cobrança todo mês e **lembra o cliente sozinho**. Você para de cobrar na mão.
+2. **O cliente continua pagando por Pix**, que é o que ele já faz, ou por cartão ou boleto, se preferir.
+3. **Emite a nota fiscal automaticamente** a cada pagamento.
+4. **Webhook completo:** quando alguém paga, atrasa ou cancela, o n8n fica sabendo e age (libera o portal, te avisa no WhatsApp, atualiza o Brevo).
+5. **Não precisa de WooCommerce.** O site só tem um formulário "Contratar".
+
+### Como fica o checkout no site (página `/contratar`)
+
+```
+Cliente escolhe o plano e preenche nome, CNPJ, e-mail, WhatsApp
+   → n8n cria o cliente no Asaas
+   → n8n cria a cobrança da implantação (R$800 ou R$1.600) + a assinatura de R$300/mês
+   → o cliente cai na página de pagamento do Asaas (Pix, cartão ou boleto)
+   → pagou: webhook → n8n libera o portal, manda o briefing e te avisa no WhatsApp
+```
 
 Quando alguém te chamar no WhatsApp, você só manda o link de `/contratar`.
+
+**Clientes atuais:** cadastre cada um no Asaas com a assinatura de R$300/mês. A partir daí a cobrança e o lembrete passam a ser automáticos.
+
+**Plano B:** Stripe, que tem o melhor checkout e suporta Pix recorrente, mas não emite nota fiscal.
 
 ## 2. Módulos do portal ("Tenho interesse")
 

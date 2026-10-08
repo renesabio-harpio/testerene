@@ -39,5 +39,5 @@ Se no futuro o portal crescer muito, ele migra para um app separado. Para começ
 
 ## Pendências
 
-- [ ] Aprovar: portal dentro do WordPress (recomendado) ou app separado
-- [ ] Definir o endereço: `/area-do-cliente` ou um subdomínio `cliente.renesabio.com.br`
+- [x] Portal dentro do WordPress (aprovado)
+- [x] Endereço: `renesabio.com.br/area-do-cliente` (aprovado)
