@@ -88,8 +88,8 @@ Taxas padrão (os 3 primeiros meses têm preço promocional menor):
 
 | Cobrança | Pago por Pix + NF + lembretes | Pago no cartão + NF + lembretes |
 |---|---|---|
-| Mensalidade R$300 | Custo **R$3,47** (1,2%) → recebe **R$296,53** | Custo R$10,95 → recebe R$289,05 |
-| Implantação R$1.600 | Custo **R$3,47** → recebe **R$1.596,53** | Custo R$49,82 → recebe R$1.550,18 |
+| Mensalidade R$300 | Custo **R$3,47** (1,2%) → recebe **R$296,53** | Custo R$10,94 → recebe R$289,06 |
+| Implantação R$1.600 | Custo **R$3,47** → recebe **R$1.596,53** | Custo R$49,81 → recebe R$1.550,19 |
 
 **Configuração recomendada:** Pix como forma principal, cartão como opção, lembretes por e-mail + SMS ligados e WhatsApp desligado (você já tem o seu próprio).
 
