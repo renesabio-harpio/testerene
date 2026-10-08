@@ -93,6 +93,19 @@ Taxas padrão (os 3 primeiros meses têm preço promocional menor):
 
 **Configuração recomendada:** Pix como forma principal, cartão como opção, lembretes por e-mail + SMS ligados e WhatsApp desligado (você já tem o seu próprio).
 
+### Quando o dinheiro fica disponível no Asaas
+
+| Forma de pagamento | Disponível para sacar |
+|---|---|
+| **Pix** | **Na hora** (24/7) |
+| Boleto | 0 a 2 dias úteis |
+| Cartão de débito | 1 a 3 dias |
+| Cartão de crédito à vista | **D+32** (32 dias depois) |
+| Cartão parcelado | Uma parcela a cada 32 dias (D+32, D+64…) |
+| Antecipação do cartão | Recebe tudo em até 2 dias úteis, pagando 1,25% ao mês (à vista) ou 1,70% ao mês (parcelado), sujeito a análise de crédito |
+
+**Transferência automática para o Nubank PJ:** não achei na documentação do Asaas uma opção nativa de "saque automático". Dá para montar no n8n: chega o webhook "pagamento recebido", o n8n manda um Pix do saldo para a sua chave do Nubank PJ. São 30 transferências Pix grátis por mês para PJ. Confirme com o suporte do Asaas se a API de transferência exige alguma liberação extra (whitelist de IP ou token de segurança).
+
 **Plano B:** Stripe, que tem o melhor checkout e suporta Pix recorrente, mas não emite nota fiscal.
 
 ## 2. Módulos do portal ("Tenho interesse")
