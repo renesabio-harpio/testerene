@@ -69,6 +69,30 @@ Quando alguém te chamar no WhatsApp, você só manda o link de `/contratar`.
 
 **Clientes atuais:** cadastre cada um no Asaas com a assinatura de R$300/mês. A partir daí a cobrança e o lembrete passam a ser automáticos.
 
+### Custo real no Asaas (tabela oficial enviada por você, out/2026)
+
+Taxas padrão (os 3 primeiros meses têm preço promocional menor):
+
+| Item | Taxa |
+|---|---|
+| Pix recebido | R$1,99 por pagamento |
+| Boleto recebido | R$1,99 por pagamento |
+| Cartão de crédito (assinatura) | R$0,49 + 2,99% |
+| Nota fiscal (NFS-e) | R$0,49 por nota |
+| Lembretes por e-mail + SMS | R$0,99 por cobrança paga (sem limite de mensagens) |
+| Lembrete por WhatsApp | R$0,55 por mensagem (opcional) |
+| Transferência Pix para sua conta (PJ) | 30 grátis por mês |
+| Conta, mensalidade e emissão de cobrança | Grátis |
+
+**Quanto sobra por cliente:**
+
+| Cobrança | Pago por Pix + NF + lembretes | Pago no cartão + NF + lembretes |
+|---|---|---|
+| Mensalidade R$300 | Custo **R$3,47** (1,2%) → recebe **R$296,53** | Custo R$10,95 → recebe R$289,05 |
+| Implantação R$1.600 | Custo **R$3,47** → recebe **R$1.596,53** | Custo R$49,82 → recebe R$1.550,18 |
+
+**Configuração recomendada:** Pix como forma principal, cartão como opção, lembretes por e-mail + SMS ligados e WhatsApp desligado (você já tem o seu próprio).
+
 **Plano B:** Stripe, que tem o melhor checkout e suporta Pix recorrente, mas não emite nota fiscal.
 
 ## 2. Módulos do portal ("Tenho interesse")
